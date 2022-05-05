@@ -13,9 +13,13 @@ const ngrok =
     : false;
 const { resolve } = require('path');
 const app = express();
-const { getData } = require('./api/getlatestversion.js');
+// const { getData } = require('./api/getlatestversion');
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
-app.use('/api', getData);
+app.get('/api', (req, res) =>
+  res.send({
+    build_number: 1,
+  }),
+);
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
