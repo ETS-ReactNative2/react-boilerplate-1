@@ -1,0 +1,146 @@
+// Define the Product Font
+@font-face {
+  font-weight: 200;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 200;
+  font-style: italic;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-ThinItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-RegularItalic.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-MediumItalic.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-weight: 800;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 800;
+  font-style: italic;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 900;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style: italic;
+  font-family: 'Product Sans';
+  src: url('../app/assets/fonts/ProductSans-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 200;
+  font-family: 'Poppins';
+  src: url('../app/assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-weight: 800;
+  font-family: 'Poppins';
+  src: url('../app/assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+// Start Global Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+input,
+textarea,
+button,
+ul,
+ol,
+a,
+span {
+  font-family: 'Poppins', Arial, Helvetica, 'Trebuchet MS', Verdana;
+  margin: 0px;
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+svg {
+  vertical-align: baseline;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #780001;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #780001;
+}
+
+::-webkit-scrollbar-track {
+  background: #e09494;
+}

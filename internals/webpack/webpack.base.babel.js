@@ -4,6 +4,15 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const fs = require('fs');
+const lessVarsToJs = require('less-vars-to-js');
+
+const themeVariables = lessVarsToJs(
+  fs.readFileSync(
+    path.join(process.cwd(), 'app/theme/antd/index.less'),
+    'utf8',
+  ),
+);
 
 module.exports = options => ({
   mode: options.mode,
@@ -26,6 +35,29 @@ module.exports = options => ({
           loader: 'babel-loader',
           options: options.babelQuery,
         },
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'less-loader',
+            options: {
+              modifyVars: themeVariables,
+              javascriptEnabled: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         // Preprocess our own .css files
