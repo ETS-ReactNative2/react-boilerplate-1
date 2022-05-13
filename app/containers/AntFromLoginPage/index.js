@@ -31,7 +31,6 @@ export function AntFromLoginPage() {
           <Box className="mt-5 w-100">
             <Typography className="welcomeMessage text-center">
               <FormattedMessage {...messages.welcomeMessage} />
-              <h1>Hello</h1>
             </Typography>
             <Typography
               className="secondMessage text-center"
