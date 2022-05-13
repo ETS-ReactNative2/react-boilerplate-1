@@ -5,10 +5,10 @@
  *
  */
 
-import React from 'react';
+import React, { lazy } from 'react';
 // import { FormattedMessage } from 'react-intl';
 // import messages from './messages';
-import { AntFromLoginPage } from '../AntFromLoginPage';
+const AntFromLoginPage = lazy(() => import('../AntFromLoginPage'));
 
 export default function HomePage() {
   return <AntFromLoginPage />;

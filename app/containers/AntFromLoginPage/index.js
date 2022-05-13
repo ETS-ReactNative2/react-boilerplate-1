@@ -15,7 +15,7 @@ import messages from './messages';
 import './styles.scss';
 // const { Text, Link } = Typography;
 
-export function AntFromLoginPage() {
+export default function AntFromLoginPage() {
   return (
     <Box className="loginFormContainer h-100 w-100">
       <Grid container className="h-100 w-100">
