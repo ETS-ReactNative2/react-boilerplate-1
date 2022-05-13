@@ -32,12 +32,12 @@ export function AntFromLoginPage() {
             <Typography className="welcomeMessage text-center">
               <FormattedMessage {...messages.welcomeMessage} />
             </Typography>
-            <Typography
+            {/* <Typography
               className="secondMessage text-center"
               // style={{ fontSize: width > 600 ? '' : '16px' }}
             >
               <FormattedMessage {...messages.enterMobilenumber} />
-            </Typography>
+            </Typography> */}
           </Box>
         </Grid>
       </Grid>
