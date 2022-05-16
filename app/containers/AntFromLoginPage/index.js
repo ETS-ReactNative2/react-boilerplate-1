@@ -12,9 +12,15 @@ import 'react-phone-input-3/lib/material.css';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { Typography, Form } from 'antd';
+import Stack from '@mui/material/Stack';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import { Button as MuiButton } from '@mui/material';
+import { GoogleLogin } from 'react-google-login';
 import Button from '../../components/Button';
 import EmohaLogoSign from '../../assets/svgImages/EmohaLogoSign';
 import messages from './messages';
+import FacebookIcon from '../../assets/svgImages/FacebookLogo';
+import GoogleIcon from '../../assets/svgImages/GoogleIcon';
 import './styles.scss';
 // const [form] = Form.useForm();
 // const { Text, Link } = Typography;
@@ -83,6 +89,47 @@ export default function AntFromLoginPage() {
                   <span>OR</span>
                 </h6>
               </Box>
+              <Stack direction="row" spacing={2}>
+                <FacebookLogin
+                  appId="4393624587388530"
+                  autoLoad={false}
+                  fields="name,email,picture"
+                  render={() => (
+                    <MuiButton
+                      variant="contained"
+                      startIcon={<FacebookIcon />}
+                      className="socialButton"
+                      style={{
+                        backgroundColor: '#475993',
+                        fontWeight: 'bold',
+                      }}
+                      // onClick={renderProps.onClick}
+                    >
+                      Facebook
+                    </MuiButton>
+                  )}
+                />
+                <GoogleLogin
+                  // clientId="735433530594-5mp5v8q0kjqm0lod7niirsfu03eecgd4.apps.googleusercontent.com"
+                  fields="first_name,last_name,email,picture"
+                  render={() => (
+                    <MuiButton
+                      variant="contained"
+                      startIcon={<GoogleIcon />}
+                      className="socialButton"
+                      style={{
+                        backgroundColor: '#f44336',
+                        fontWeight: 'bold',
+                      }}
+                      // onClick={renderProps.onClick}
+                    >
+                      Google
+                    </MuiButton>
+                  )}
+                  buttonText="Login"
+                  // onSuccess={responseGoogle}
+                />
+              </Stack>
             </div>
           </Box>
         </Grid>
