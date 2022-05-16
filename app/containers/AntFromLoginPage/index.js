@@ -4,6 +4,7 @@ import React from 'react';
 // import { createStructuredSelector } from 'reselect';
 // import { compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
+// import useWindowDimensions from './useWindowDimensions';
 // const { width } = useWindowDimensions();
 
 // import { GoogleLogin } from 'react-google-login';
@@ -32,12 +33,12 @@ export default function AntFromLoginPage() {
             <Typography className="welcomeMessage text-center">
               <FormattedMessage {...messages.welcomeMessage} />
             </Typography>
-            {/* <Typography
+            <Typography
               className="secondMessage text-center"
               // style={{ fontSize: width > 600 ? '' : '16px' }}
             >
               <FormattedMessage {...messages.enterMobilenumber} />
-            </Typography> */}
+            </Typography>
           </Box>
         </Grid>
       </Grid>
