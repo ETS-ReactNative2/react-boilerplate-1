@@ -78,6 +78,11 @@ export default function AntFromLoginPage() {
                   </Button>
                 </Form.Item>
               </Form>
+              <Box className="mt-5 mb-5">
+                <h6 style={{ color: '#979fb4' }}>
+                  <span>OR</span>
+                </h6>
+              </Box>
             </div>
           </Box>
         </Grid>
