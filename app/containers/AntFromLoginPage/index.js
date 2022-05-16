@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy } from 'react';
 // import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 // import { createStructuredSelector } from 'reselect';
@@ -16,12 +16,14 @@ import Stack from '@mui/material/Stack';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import { Button as MuiButton } from '@mui/material';
 import { GoogleLogin } from 'react-google-login';
-import Button from '../../components/Button';
-import EmohaLogoSign from '../../assets/svgImages/EmohaLogoSign';
 import messages from './messages';
-import FacebookIcon from '../../assets/svgImages/FacebookLogo';
-import GoogleIcon from '../../assets/svgImages/GoogleIcon';
 import './styles.scss';
+const Button = lazy(() => import('../../components/Button'));
+const EmohaLogoSign = lazy(() =>
+  import('../../assets/svgImages/EmohaLogoSign'),
+);
+const FacebookIcon = lazy(() => import('../../assets/svgImages/FacebookLogo'));
+const GoogleIcon = lazy(() => import('../../assets/svgImages/GoogleIcon'));
 // const [form] = Form.useForm();
 // const { Text, Link } = Typography;
 
