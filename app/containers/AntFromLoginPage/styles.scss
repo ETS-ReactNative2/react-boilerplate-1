@@ -29,7 +29,7 @@
   display: flex;
 }
 .flex-column {
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 .align-items-center {
@@ -48,6 +48,9 @@
 
 .mt-5 {
   margin-top: 50px;
+}
+.mt-4 {
+  margin-top: 40px;
 }
 
 h1,
