@@ -6,13 +6,13 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PhoneInput from 'react-phone-input-3';
 import 'react-phone-input-3/lib/material.css';
-// import Button from '../../components/Button';
 
 // import { GoogleLogin } from 'react-google-login';
 // import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { Typography, Form } from 'antd';
+import Button from '../../components/Button';
 import EmohaLogoSign from '../../assets/svgImages/EmohaLogoSign';
 import messages from './messages';
 import './styles.scss';
@@ -47,7 +47,7 @@ export default function AntFromLoginPage() {
               <Form
                 layout="vertical"
                 name="basic"
-                // initialValues={{ remember: true }}
+                initialValues={{ remember: true }}
               >
                 <Form.Item
                   name="phonenumber"
@@ -67,7 +67,7 @@ export default function AntFromLoginPage() {
                     placeholder="Phone Number"
                   />
                 </Form.Item>
-                {/* <Form.Item>
+                <Form.Item>
                   <Button
                     type="primary"
                     htmlType="submit"
@@ -76,7 +76,7 @@ export default function AntFromLoginPage() {
                   >
                     <FormattedMessage {...messages.sendOtp} />
                   </Button>
-                </Form.Item> */}
+                </Form.Item>
               </Form>
             </div>
           </Box>

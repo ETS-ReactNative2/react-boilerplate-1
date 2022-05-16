@@ -49,6 +49,30 @@
 .mt-5 {
   margin-top: 50px;
 }
+
+.ant-form-vertical .ant-form-item {
+  flex-direction: column;
+}
+.ant-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.ant-form-item {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  margin-bottom: 24px;
+  vertical-align: top;
+  transition: margin-bottom 0.3s 0.017s linear;
+}
+
 .mt-4 {
   margin-top: 40px;
 }
