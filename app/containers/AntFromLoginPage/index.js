@@ -24,10 +24,28 @@ const EmohaLogoSign = lazy(() =>
 );
 const FacebookIcon = lazy(() => import('../../assets/svgImages/FacebookLogo'));
 const GoogleIcon = lazy(() => import('../../assets/svgImages/GoogleIcon'));
-// const [form] = Form.useForm();
-// const { Text, Link } = Typography;
+// import imagemin from 'imagemin';
+// import imageminSvgo from 'imagemin-svgo';
+// import * as ReactDOMServer from 'react-dom/server';
 
 export default function AntFromLoginPage() {
+  // (async () => {
+  //   await imagemin(['images/*.svg'], {
+  //     destination: 'build/images',
+  //     plugins: [
+  //       imageminSvgo({
+  //         plugins: [
+  //           {
+  //             name: 'removeViewBox',
+  //             active: false,
+  //           },
+  //         ],
+  //       }),
+  //     ],
+  //   });
+
+  //   console.log('Images optimized');
+  // })();
   return (
     <Box className="loginFormContainer h-100 w-100">
       <Grid container className="h-100 w-100">

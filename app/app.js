@@ -19,6 +19,8 @@ import '../styles/globals.scss';
 
 // Import root app
 import App from 'containers/App';
+const hydrateData = window.__HYDRATE_DATA__;
+delete window.__HYDRATE_DATA__;
 
 // Import Language Provider
 import LanguageProvider from 'containers/LanguageProvider';
@@ -40,7 +42,7 @@ const store = configureStore(initialState, history);
 const MOUNT_NODE = document.getElementById('app');
 
 const render = messages => {
-  ReactDOM.render(
+  ReactDOM.hydrate(
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>

@@ -6,6 +6,8 @@ const path = require('path');
 const webpack = require('webpack');
 const fs = require('fs');
 const lessVarsToJs = require('less-vars-to-js');
+// const imageMinSvgo = require('imagemin-svgo');
+const { default: imageminSvgo } = require('imagemin-svgo');
 
 const themeVariables = lessVarsToJs(
   fs.readFileSync(
@@ -28,6 +30,23 @@ module.exports = options => ({
   optimization: options.optimization,
   module: {
     rules: [
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'url-loader?limit=10000',
+          {
+            loader: 'img-loader',
+            options: {
+              plugins: [
+                // require('imagemin-gifsicle')({}),
+                // require('imagemin-mozjpeg')({}),
+                // require('imagemin-optipng')({}),
+                imageminSvgo,
+              ],
+            },
+          },
+        ],
+      },
       {
         test: /\.jsx?$/, // Transform all .js and .jsx files required somewhere with Babel
         exclude: /node_modules/,
