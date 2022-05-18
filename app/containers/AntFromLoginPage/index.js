@@ -20,8 +20,9 @@ const Button = lazy(() => import('../../components/Button'));
 const EmohaLogoSign = lazy(() =>
   import('../../assets/svgImages/EmohaLogoSign'),
 );
-const FacebookIcon = lazy(() => import('../../assets/svgImages/FacebookLogo'));
-const GoogleIcon = lazy(() => import('../../assets/svgImages/GoogleIcon'));
+// const FacebookIcon = lazy(() => import('../../assets/svgImages/FacebookLogo'));
+// const GoogleIcon = lazy(() => import('../../assets/svgImages/GoogleIcon'));
+
 // import imagemin from 'imagemin';
 // import imageminSvgo from 'imagemin-svgo';
 // import * as ReactDOMServer from 'react-dom/server';
@@ -115,7 +116,7 @@ export default function AntFromLoginPage() {
                   render={() => (
                     <MuiButton
                       variant="contained"
-                      startIcon={<FacebookIcon />}
+                      // startIcon={<FacebookIcon />}
                       className="socialButton"
                       style={{
                         backgroundColor: '#475993',
@@ -133,7 +134,7 @@ export default function AntFromLoginPage() {
                   render={() => (
                     <MuiButton
                       variant="contained"
-                      startIcon={<GoogleIcon />}
+                      // startIcon={<GoogleIcon />}
                       className="socialButton"
                       style={{
                         backgroundColor: '#f44336',
