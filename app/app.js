@@ -16,11 +16,10 @@ import { ConnectedRouter } from 'connected-react-router';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
 import '../styles/globals.scss';
+import * as ReactDOMClient from 'react-dom/client';
 
 // Import root app
 import App from 'containers/App';
-const hydrateData = window.__HYDRATE_DATA__;
-delete window.__HYDRATE_DATA__;
 
 // Import Language Provider
 import LanguageProvider from 'containers/LanguageProvider';
@@ -35,6 +34,8 @@ import configureStore from './configureStore';
 
 // Import i18n messages
 import { translationMessages } from './i18n';
+// const hydrateData = window.__HYDRATE_DATA__;
+// delete window.__HYDRATE_DATA__;
 
 // Create redux store with history
 const initialState = {};
@@ -42,7 +43,8 @@ const store = configureStore(initialState, history);
 const MOUNT_NODE = document.getElementById('app');
 
 const render = messages => {
-  ReactDOM.hydrate(
+  ReactDOMClient.hydrateRoot(
+    MOUNT_NODE,
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
@@ -50,7 +52,6 @@ const render = messages => {
         </ConnectedRouter>
       </LanguageProvider>
     </Provider>,
-    MOUNT_NODE,
   );
 };
 
