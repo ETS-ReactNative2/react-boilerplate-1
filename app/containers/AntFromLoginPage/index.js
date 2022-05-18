@@ -7,23 +7,21 @@ import { FormattedMessage } from 'react-intl';
 import PhoneInput from 'react-phone-input-3';
 import 'react-phone-input-3/lib/material.css';
 
-// import { GoogleLogin } from 'react-google-login';
-// import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { Typography, Form } from 'antd';
-// import Stack from '@mui/material/Stack';
-// import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
-// import { Button as MuiButton } from '@mui/material';
-// import { GoogleLogin } from 'react-google-login';
+import Stack from '@mui/material/Stack';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import { Button as MuiButton } from '@mui/material';
+import { GoogleLogin } from 'react-google-login';
 import messages from './messages';
 import './styles.scss';
 const Button = lazy(() => import('../../components/Button'));
 const EmohaLogoSign = lazy(() =>
   import('../../assets/svgImages/EmohaLogoSign'),
 );
-// const FacebookIcon = lazy(() => import('../../assets/svgImages/FacebookLogo'));
-// const GoogleIcon = lazy(() => import('../../assets/svgImages/GoogleIcon'));
+const FacebookIcon = lazy(() => import('../../assets/svgImages/FacebookLogo'));
+const GoogleIcon = lazy(() => import('../../assets/svgImages/GoogleIcon'));
 // import imagemin from 'imagemin';
 // import imageminSvgo from 'imagemin-svgo';
 // import * as ReactDOMServer from 'react-dom/server';
@@ -109,7 +107,7 @@ export default function AntFromLoginPage() {
                   <span>OR</span>
                 </h6>
               </Box>
-              {/* <Stack direction="row" spacing={2}>
+              <Stack direction="row" spacing={2}>
                 <FacebookLogin
                   appId="4393624587388530"
                   autoLoad={false}
@@ -149,7 +147,7 @@ export default function AntFromLoginPage() {
                   buttonText="Login"
                   // onSuccess={responseGoogle}
                 />
-              </Stack> */}
+              </Stack>
             </div>
           </Box>
         </Grid>
