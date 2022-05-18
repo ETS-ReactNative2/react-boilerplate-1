@@ -12,10 +12,10 @@ import 'react-phone-input-3/lib/material.css';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { Typography, Form } from 'antd';
-import Stack from '@mui/material/Stack';
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
-import { Button as MuiButton } from '@mui/material';
-import { GoogleLogin } from 'react-google-login';
+// import Stack from '@mui/material/Stack';
+// import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+// import { Button as MuiButton } from '@mui/material';
+// import { GoogleLogin } from 'react-google-login';
 import messages from './messages';
 import './styles.scss';
 const Button = lazy(() => import('../../components/Button'));
@@ -109,7 +109,7 @@ export default function AntFromLoginPage() {
                   <span>OR</span>
                 </h6>
               </Box>
-              <Stack direction="row" spacing={2}>
+              {/* <Stack direction="row" spacing={2}>
                 <FacebookLogin
                   appId="4393624587388530"
                   autoLoad={false}
@@ -117,7 +117,7 @@ export default function AntFromLoginPage() {
                   render={() => (
                     <MuiButton
                       variant="contained"
-                      // startIcon={<FacebookIcon />}
+                      startIcon={<FacebookIcon />}
                       className="socialButton"
                       style={{
                         backgroundColor: '#475993',
@@ -135,7 +135,7 @@ export default function AntFromLoginPage() {
                   render={() => (
                     <MuiButton
                       variant="contained"
-                      // startIcon={<GoogleIcon />}
+                      startIcon={<GoogleIcon />}
                       className="socialButton"
                       style={{
                         backgroundColor: '#f44336',
@@ -149,7 +149,7 @@ export default function AntFromLoginPage() {
                   buttonText="Login"
                   // onSuccess={responseGoogle}
                 />
-              </Stack>
+              </Stack> */}
             </div>
           </Box>
         </Grid>
