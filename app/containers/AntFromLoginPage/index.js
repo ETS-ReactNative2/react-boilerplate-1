@@ -46,7 +46,7 @@ export default function AntFromLoginPage() {
   //   console.log('Images optimized');
   // })();
   return (
-    <Box className="loginFormContainer h-100 w-100">
+    <Box className="loginFormContainer h-100 w-100" component="div">
       <Grid container className="h-100 w-100">
         <Grid item sm={8} xs={12} className="leftContainer">
           {/* <h1>Hello</h1> */}
@@ -58,7 +58,7 @@ export default function AntFromLoginPage() {
           className="d-flex flex-column align-items-center justify-content-between w-100 form-container"
         >
           <EmohaLogoSign style={{ position: 'absolute', right: 0 }} />
-          <Box className="mt-5">
+          <Box className="mt-5" component="div">
             <Typography className="welcomeMessage text-center">
               <FormattedMessage {...messages.welcomeMessage} />
             </Typography>
@@ -68,7 +68,7 @@ export default function AntFromLoginPage() {
             >
               <FormattedMessage {...messages.enterMobilenumber} />
             </Typography>
-            <div className="mt-4">
+            <div className="mt-4" role="form">
               <Form
                 layout="vertical"
                 name="basic"
@@ -129,7 +129,7 @@ export default function AntFromLoginPage() {
                   )}
                 />
                 <GoogleLogin
-                  // clientId="735433530594-5mp5v8q0kjqm0lod7niirsfu03eecgd4.apps.googleusercontent.com"
+                  clientId="735433530594-5mp5v8q0kjqm0lod7niirsfu03eecgd4.apps.googleusercontent.com"
                   fields="first_name,last_name,email,picture"
                   render={() => (
                     <MuiButton
