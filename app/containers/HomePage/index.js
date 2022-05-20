@@ -6,10 +6,18 @@
  */
 
 import React, { lazy } from 'react';
+import MetaTags from 'react-meta-tags';
 // import { FormattedMessage } from 'react-intl';
 // import messages from './messages';
 const AntFromLoginPage = lazy(() => import('../AntFromLoginPage'));
 
 export default function HomePage() {
-  return <AntFromLoginPage />;
+  return (
+    <div>
+      <MetaTags>
+        <meta name="description" content="Emoha login" />
+      </MetaTags>
+      <AntFromLoginPage />
+    </div>
+  );
 }
