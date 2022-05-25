@@ -107,7 +107,8 @@
     "sanitize.css": "8.0.0",
     "sass": "^1.48.0",
     "sass-loader": "^8.0.2",
-    "styled-components": "4.2.0"
+    "styled-components": "4.2.0",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/cli": "7.4.3",

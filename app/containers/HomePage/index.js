@@ -5,13 +5,21 @@
  *
  */
 
-import React, { lazy } from 'react';
+import React, { lazy, useEffect } from 'react';
 import MetaTags from 'react-meta-tags';
 // import { FormattedMessage } from 'react-intl';
 // import messages from './messages';
+import WebFont from 'webfontloader';
 const AntFromLoginPage = lazy(() => import('../AntFromLoginPage'));
 
 export default function HomePage() {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Product Sans'],
+      },
+    });
+  }, []);
   return (
     <div>
       <MetaTags>
